@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/box.css">
+    <link rel="stylesheet" href="css/form-box.css">
+    <link rel="stylesheet" href="css/form-image.css">
+    <link rel="stylesheet" href="css/form-header.css">
+    <link rel="stylesheet" href="css/input-group.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <title>Formulário Médico</title>
+</head>
+
+<body>
+    <div id="formulario" class="box">
+
+        <div class="form-image">
+            <img src="css/Logo.png" alt="Logo">
+        </div>
+
+        <div class="form-box">
+
+            <div class="form-header">
+                <h1>Formulário Médico</h1>
+            </div>
+
+            <form action="#">
+                
+                <div class="input-group">
+                    <label for="name">Nome</label>
+                    <input id="name" type="text" name="name" required> 
+                </div>
+
+                <div class="input-group">
+                    <label for="data_nascimento">Data de Nascimento</label>
+                    <input id="date" type="date" name="data_nascimento" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="rg">RG</label>
+                    <input id="rg" name="rg" required>
+                </div>
+                      
+                <div class="input-group">
+                    <label for="sus">Carteirinha SUS (opcional)</label>
+                    <input id="sus" name="sus">
+                </div>
+
+                <div class="input-group">
+                    <label for="plano_saude">Possui plano de saúde?</label>
+                    <input id="plano_saude" name="plano_saude">
+                </div>
+
+                <div class="input-group">
+                    <label for="cronica">Possui doença crônica?</label>
+                    <input id="cronica" name="cronica" class="box2">
+                </div>
+
+                <div class="input-group">
+                    <label for="medicamentos">Faz uso contínuo de medicamentos?</label>
+                    <input for="medicamentos" name="medicamentos" class="box2">
+                </div>
+
+                <div class="input-group">
+                    <label for="alergia">Possui alergia a algum medicamento?</label>
+                    <input for="alergia" name="alergia">
+                </div>
+
+                <div class="input-group">
+                    <p>Contato de emergência 1</p>
+                    <label for="emergency-contact">Nome</label>
+                    <input id="name-contact" name="name-contact" required>
+                    <label for="emergency-contact">Telefone</label>   
+                    <input id="tel-contact" name="tel-contact" required>  
+                </div>
+
+                <div class="input-group">
+                    <p>Contato de emergência 2</p>
+                    <label for="emergency-contact">Nome</label>
+                    <input id="name-contact" name="name-contact">
+                    <label for="emergency-contact">Telefone</label>   
+                    <input id="tel-contact" name="tel-contact">  
+                </div>
+
+                <div class="button">
+                    <button onclick="createPDF()" alt="Gerar PDF" title="Gerar PDF">Gerar PDF</button>
+                </div>
+                
+            </form>
+                
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
